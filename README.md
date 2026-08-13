@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MANAS — Mental Health Assessment Mobile Application
 
 Version: 1.0.0
@@ -70,3 +71,7 @@ Add license information if required.
 
 ---
 Updated README with app summary and push instructions.
+=======
+# MANAS-Mental-Health-Assessment-Mobile-Application
+ontributed to the frontend redesign of the MANAS mental health assessment app. Implemented forced update functionality to block outdated versions and prompt users to update. Designed UI in Figma and developed it using React Native, ensuring responsive performance across mobile and tablet devices.
+>>>>>>> 0713af85063ffbe059ec4704718ccf461894bd62

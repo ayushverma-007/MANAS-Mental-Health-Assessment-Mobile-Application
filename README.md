@@ -1,18 +1,16 @@
-<<<<<<< HEAD
 # MANAS — Mental Health Assessment Mobile Application
 
-Version: 1.0.0
+Version: 1.0.1
 
 ## Overview
-MANAS is a simple client-side mental-health assessment demo built as a mobile-friendly web app. The UI is static HTML/CSS/JS located in the `manas-demo/` folder and includes pages for onboarding, assessments, profile, and results.
+MANAS is a client-side mental-health assessment demo built as a mobile-friendly web app. The UI is static HTML/CSS/JS located in the `manas-demo/` folder and includes pages for onboarding, assessments, profile, and results.
 
 ## What it does
 - Provides guided mental-health surveys and wellness checks.
-- Stores/provides assessment flow via static pages (no backend required for demo).
-- Pages include: `index.html`, `login.html`, `registration.html`, `survey.html`, `profile.html`, `goalreached.html`, `wellnesscheck.html` and more under `manas-demo/`.
+- Demonstrates a mobile-friendly assessment flow without a backend (demo only).
+- Key pages: `index.html`, `login.html`, `registration.html`, `survey.html`, `profile.html`, `goalreached.html`, `wellnesscheck.html`.
 
 ## Project structure
-
 - `manas-demo/` — main demo site (open `manas-demo/index.html` in a browser)
 
 ## User flow
@@ -21,57 +19,43 @@ MANAS is a simple client-side mental-health assessment demo built as a mobile-fr
 3. Complete surveys (`survey.html`, `wellnesscheck.html`)
 4. View results (`goalreached.html`, `growth.html`, `profile.html`)
 
-## How to run locally
-1. Open the `manas-demo/index.html` file in your browser, or serve the folder via a simple static server.
+## Screenshots
+Place screenshots under `manas-demo/screenshots/` and reference them below. Example Markdown:
 
-Example (Python 3 built-in server):
+```md
+![Home screen](manas-demo/screenshots/home.png)
+![Survey screen](manas-demo/screenshots/survey.png)
+```
+
+If you want, I can add placeholder screenshots or help capture them from a running local server.
+
+## How to run locally
+Open `manas-demo/index.html` in a browser or serve the folder with a simple static server:
 
 ```bash
 cd manas-demo
 python -m http.server 8000
-# then open http://localhost:8000 in your browser
+# open http://localhost:8000
 ```
 
+## Changelog
+- 1.0.1 — README: added Screenshots and Changelog (2026-08-13)
+- 1.0.0 — Initial demo import: static HTML/CSS/JS pages
+
 ## GitHub push steps
-If your remote repository already exists (for example: https://github.com/ayushverma-007/MANAS-Mental-Health-Assessment-Mobile-Application), follow these commands from the project root (`manas-2.0`):
+From the project root (`manas-2.0`) — these are the commands I used previously to initialize and push the project:
 
 ```bash
-# initialize (if not already a git repo)
-git init
-
-# add files and commit
 git add .
-git commit -m "Initial import: MANAS demo"
-
-# ensure the branch name is 'main' locally
-git branch -M main
-
-# add remote (replace URL if needed)
-git remote add origin https://github.com/ayushverma-007/MANAS-Mental-Health-Assessment-Mobile-Application.git
-
-# fetch remote and merge remote README if it exists (handles unrelated histories)
-git fetch origin
-# try pulling 'main', if remote's default branch is 'master' use that instead
-git pull origin main --allow-unrelated-histories
-
-# resolve any merge conflicts, then:
-git add .
-git commit -m "Merge remote README"
-
-# push to GitHub
-git push -u origin main
+git commit -m "Update README: add screenshots and changelog"
+git push
 ```
 
 Notes:
-- If the remote uses `master` as the default branch, replace `main` with `master` in `git pull` and `git push` commands.
-- If you get merge conflicts after the pull, resolve them in your editor, then `git add` and `git commit` before pushing.
+- If the remote uses `master` as default, replace `main` with `master` when needed.
 
 ## License & Credits
 Add license information if required.
 
 ---
-Updated README with app summary and push instructions.
-=======
-# MANAS-Mental-Health-Assessment-Mobile-Application
-ontributed to the frontend redesign of the MANAS mental health assessment app. Implemented forced update functionality to block outdated versions and prompt users to update. Designed UI in Figma and developed it using React Native, ensuring responsive performance across mobile and tablet devices.
->>>>>>> 0713af85063ffbe059ec4704718ccf461894bd62
+If you'd like, I can commit and push this README update for you now, and/or add placeholder screenshots.

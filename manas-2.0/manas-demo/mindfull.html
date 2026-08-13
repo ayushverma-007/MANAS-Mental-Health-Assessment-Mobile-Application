@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mindfulness Session</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#19e65e",
+            "background-light": "#f6f8f6",
+            "background-dark": "#112116",
+            "text-main-light": "#0e1b12",
+            "text-main-dark": "#e0ebe3",
+            "text-sub-light": "#4a6352",
+            "text-sub-dark": "#a1b8aa",
+          },
+          fontFamily: {
+            display: ["Manrope", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+            lg: "2rem",
+            xl: "3rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Animations -->
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+    @keyframes breathe {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    @keyframes twinkle {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    .animate-breathe { animation: breathe 8s ease-in-out infinite; }
+    .animate-twinkle { animation: twinkle 3s ease-in-out infinite; }
+    .animate-twinkle-delay {
+      animation: twinkle 4s ease-in-out infinite;
+      animation-delay: 1.5s;
+    }
+
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-background-light font-display text-text-main-light antialiased transition-colors">
+
+  <div class="relative min-h-screen max-w-md mx-auto flex flex-col overflow-hidden bg-white/50 shadow-2xl">
+
+    <!-- HEADER -->
+    <header class="flex items-center justify-between p-4 z-20">
+      <!-- Back -->
+      <a href="survey.html"
+         class="flex h-12 w-12 items-center justify-center rounded-full hover:bg-black/5 transition">
+        <span class="material-symbols-outlined text-2xl">
+          arrow_back_ios_new
+        </span>
+      </a>
+
+      <!-- Favorite -->
+      <button
+        class="flex h-12 w-12 items-center justify-center rounded-full hover:bg-black/5 transition">
+        <span class="material-symbols-outlined text-2xl">favorite</span>
+      </button>
+    </header>
+
+    <!-- MAIN -->
+    <main class="flex-1 flex flex-col items-center justify-center px-6 relative">
+
+      <!-- Background blobs -->
+      <div class="absolute top-1/4 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float pointer-events-none"></div>
+      <div class="absolute bottom-1/3 right-0 w-48 h-48 bg-green-300/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Illustration -->
+      <div class="relative w-full max-w-[320px] aspect-square flex items-center justify-center mb-8 animate-breathe">
+        <span class="material-symbols-outlined absolute top-4 right-10 text-primary/60 animate-twinkle">temp_preferences_custom</span>
+        <span class="material-symbols-outlined absolute bottom-12 left-6 text-yellow-400/60 animate-twinkle-delay">star</span>
+
+        <div class="w-64 h-64 bg-contain bg-center bg-no-repeat"
+             style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkoX1xpR1RmPb_OzNiPPucO_hewkvHaRhHLZyuM_5ZO58FqjeBLwL5MNzpDPrvKBJZNaen3XnBLfFLcbEDmLuS7yNhb6ucIQxxlnNj64ju7FoGJX5TJ58BuQyno7SLa0Kd_yelHYNhZuOLKe7ttlAGj6FpfZZsYJnDMI460Nm5uGdgK4YhZGBVwgfkOFyuPnuwQTNHADCB4KvtA7o3rUHGqajQE8eYWUpza81NSE4YnkLgcyFAbGMNvN8_-oARDXcfzgRI-5uNpHU');">
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="text-center">
+        <h1 class="text-3xl font-bold tracking-tight mb-2">
+          Mindfulness Session
+        </h1>
+        <div class="flex items-center justify-center gap-2 text-text-sub-light">
+          <span class="material-symbols-outlined text-lg">timer</span>
+          <p class="text-base font-medium">10–12 min • Focus</p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- ACTION -->
+    <footer class="p-6 pb-8 z-30">
+      <a href="goalreached.html"
+         class="w-full flex items-center justify-center h-14 rounded-full
+                bg-primary hover:bg-primary/90 active:scale-[0.98]
+                transition text-[#0e1b12] text-lg font-bold shadow-lg shadow-primary/20">
+        Start Session
+      </a>
+
+      <p class="text-center text-xs text-text-sub-light/60 mt-4">
+        Begin your journey to peace
+      </p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

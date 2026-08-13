@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manas - Login</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: "#FDE68A","primary-hover": "#FCD34D", 
+                    "primary-text": "#1F2937",
+                    "background-pastel": "#F7FAFA","text-main": "#1F2937","text-muted": "#4B5563",
+                    "input-bg": "#FFFFFF",
+                    "input-border": "#E5E7EB", 
+                    "surface-white": "#FFFFFF",
+                    "accent-pattern": "#D97706" 
+                }, 
+                fontFamily: {
+                    display: "Spline Sans", 
+                    body: ["Noto Sans", "sans-serif"]
+                }, 
+                borderRadius: {
+                    DEFAULT: "0.25rem", 
+                    lg: "0.5rem", 
+                    xl: "0.75rem", 
+                    full: "9999px"
+                }, 
+                boxShadow: {
+                    soft: "0 4px 20px -2px rgba(0, 0, 0, 0.05)", 
+                    input: "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
+                }
+            }
+        }
+    };
+</script>
+<style>
+    .input-group input:focus + label,
+    .input-group input:not(:placeholder-shown) + label {
+        transform: translateY(-1.5rem) scale(0.85);
+        color: #4B5563;
+    }
+    .input-group label {
+        transition: transform 0.2s ease, color 0.2s ease;
+        transform-origin: left top;
+    }
+    .pattern-strip {
+        background-image: repeating-linear-gradient(
+            45deg,
+            #F59E0B 0,
+            #F59E0B 10px,
+            transparent 10px,
+            transparent 20px
+        );
+        opacity: 0.1;
+    }
+</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased font-display bg-background-pastel text-text-main transition-colors duration-200 flex flex-col">
+<div class="relative flex min-h-screen w-full flex-col overflow-hidden">
+<div class="relative z-10 flex items-start p-6 justify-end">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-text-main" style="font-size: 32px; font-variation-settings: 'FILL' 1;">wb_sunny</span>
+<span class="text-[10px] font-bold tracking-[0.2em] text-text-main uppercase">Manas</span>
+</div>
+</div>
+<div class="relative z-10 flex flex-1 flex-col items-center justify-center px-8 w-full max-w-md mx-auto -mt-10">
+<div class="w-full text-center mb-10">
+<h1 class="text-text-main tracking-tight text-[32px] font-bold leading-tight pb-2">Welcome back</h1>
+<p class="text-text-muted text-base font-normal leading-relaxed px-4">
+                Enter your details to log in to your account
+            </p>
+</div>
+<div class="w-full space-y-6">
+<div class="relative input-group h-14 bg-white rounded-xl border border-gray-200 focus-within:border-gray-400 focus-within:ring-1 focus-within:ring-gray-400 shadow-sm transition-all duration-200">
+<input class="absolute bottom-0 left-0 w-full h-full pt-4 px-4 bg-transparent border-0 focus:ring-0 text-text-main font-medium placeholder-transparent rounded-xl" id="username" name="username" placeholder="Username" type="text" value=""/>
+<label class="absolute top-4 left-4 text-gray-500 pointer-events-none" for="username">Username</label>
+</div>
+<div class="relative input-group h-14 bg-white rounded-xl border border-gray-200 focus-within:border-gray-400 focus-within:ring-1 focus-within:ring-gray-400 shadow-sm transition-all duration-200">
+<input class="absolute bottom-0 left-0 w-full h-full pt-4 px-4 bg-transparent border-0 focus:ring-0 text-text-main font-medium placeholder-transparent rounded-xl pr-12" id="pin" name="pin" placeholder="Pin" type="password" value=""/>
+<label class="absolute top-4 left-4 text-gray-500 pointer-events-none" for="pin">Pin</label>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1" type="button">
+<span class="material-symbols-outlined" style="font-size: 20px;">visibility</span>
+</button>
+</div>
+<div class="flex justify-end pt-1">
+<a class="text-sm font-semibold text-text-muted hover:text-text-main transition-colors" href="#">Forgot Pin?</a>
+</div>
+<div class="pt-4">
+<a href="profile.html"
+   class="w-full cursor-pointer flex items-center justify-center rounded-full h-14 px-8 bg-primary hover:bg-primary-hover active:scale-[0.98] text-primary-text text-lg font-bold leading-normal tracking-wide transition-all shadow-soft">
+  Log In
+</a>
+
+</div>
+<div class="flex flex-col items-center space-y-4 pt-6 text-sm font-medium text-text-muted">
+<a class="hover:text-text-main transition-colors underline decoration-dotted underline-offset-4"
+   href="language.html">
+  Change language
+</a>
+
+<a class="hover:text-text-main transition-colors flex items-center gap-1 group" href="registration.html">
+                    If you don't have a profile yet, click here
+                    <span class="material-symbols-outlined text-xs transition-transform group-hover:translate-x-0.5">arrow_forward_ios</span>
+</a>
+<a class="hover:text-text-main transition-colors flex items-center gap-1 group"
+   href="number_reg.html">
+  Login with another number
+  <span class="material-symbols-outlined text-xs transition-transform group-hover:translate-x-0.5">arrow_forward_ios</span>
+</a>
+
+</div>
+</div>
+</div>
+<div class="w-full h-3 pattern-strip mt-auto"></div>
+</div>
+</body></html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mood Tracker</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "primary": "#91eb4c",
+                "background-light": "#f7f8f6",
+                "background-dark": "#182111",
+                "text-main-light": "#141b0e",
+                "text-main-dark": "#e0e6dd",
+                "text-secondary-light": "#4f6e3a",
+                "text-secondary-dark": "#a1bfa0",
+            },
+            fontFamily: {"display": ["Manrope", "sans-serif"]},
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            animation: {
+                'fade-in-up': 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                'pulse-glow': 'pulseGlow 2.5s infinite',
+            },
+            keyframes: {
+                fadeInUp: {
+                    '0%': { opacity: '0', transform: 'translateY(24px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+                pulseGlow: {
+                    '0%, 100%': { 
+                        boxShadow: '0 0 0 0 rgba(145, 235, 76, 0.0)',
+                        borderColor: 'rgba(145, 235, 76, 0.3)' 
+                    },
+                    '50%': { 
+                        boxShadow: '0 0 15px 4px rgba(145, 235, 76, 0.25)', 
+                        borderColor: 'rgba(145, 235, 76, 0.6)'
+                    },
+                }
+            }
+        },
+    },
+}
+</script>
+
+<style>
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+
+.material-symbols-outlined {
+    font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;
+    transition: font-variation-settings 0.3s ease;
+}
+
+.icon-selected .material-symbols-outlined {
+    font-variation-settings:'FILL' 0,'wght' 500,'GRAD' 0,'opsz' 24;
+}
+
+body { min-height: max(884px, 100dvh); }
+</style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark font-display antialiased overflow-x-hidden min-h-screen flex flex-col">
+
+<!-- ⭐ TOP NAVIGATION (only change: home button added on right) -->
+<div class="flex items-center p-4 pt-6 pb-2 justify-between opacity-0 animate-fade-in-up">
+
+    <!-- Back button -->
+    <button class="flex size-10 shrink-0 items-center justify-center rounded-full 
+                   hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+        <span class="material-symbols-outlined text-text-main-light dark:text-text-main-dark">
+            arrow_back
+        </span>
+    </button>
+
+    <h2 class="text-lg font-bold leading-tight flex-1 text-center pr-10">Check-in</h2>
+
+    <!-- ⭐ HOME BUTTON ADDED -->
+    <a href="home.html"
+       class="flex size-10 shrink-0 items-center justify-center rounded-full 
+              hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+        <span class="material-symbols-outlined text-text-main-light dark:text-text-main-dark">
+            home
+        </span>
+    </a>
+
+</div>
+
+<!-- Main Content Wrapper -->
+<main class="flex-1 flex flex-col w-full max-w-lg mx-auto">
+
+<!-- Headline -->
+<div class="opacity-0 animate-fade-in-up delay-100">
+<h1 class="text-[32px] font-bold leading-tight px-6 text-center pb-2 pt-4">
+    How are you <br/>feeling today?
+</h1>
+</div>
+
+<!-- Mood Selector -->
+<div class="flex-1 flex flex-col items-center justify-center py-6 min-h-[200px]">
+<div class="flex flex-wrap justify-between w-full px-6 gap-2">
+
+<!-- Very Sad -->
+<div class="flex flex-col items-center gap-2 opacity-0 animate-fade-in-up delay-200 group cursor-pointer">
+<div class="flex items-center justify-center w-14 h-14 rounded-full bg-white dark:bg-white/5 shadow-sm border border-transparent group-hover:border-primary/50 group-hover:scale-105 transition-all">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark text-[32px] group-hover:text-primary">
+    sentiment_very_dissatisfied
+</span>
+</div>
+<span class="text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark group-hover:text-primary">Very Sad</span>
+</div>
+
+<!-- Sad -->
+<div class="flex flex-col items-center gap-2 opacity-0 animate-fade-in-up delay-300 group cursor-pointer">
+<div class="flex items-center justify-center w-14 h-14 rounded-full bg-white dark:bg-white/5 shadow-sm border border-transparent group-hover:border-primary/50 group-hover:scale-105 transition-all">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark text-[32px] group-hover:text-primary">
+    sentiment_dissatisfied
+</span>
+</div>
+<span class="text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark group-hover:text-primary">Sad</span>
+</div>
+
+<!-- Neutral -->
+<div class="flex flex-col items-center gap-2 opacity-0 animate-fade-in-up delay-400 group cursor-pointer">
+<div class="flex items-center justify-center w-14 h-14 rounded-full bg-white dark:bg-white/5 shadow-sm border border-transparent group-hover:border-primary/50 group-hover:scale-105 transition-all">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark text-[32px] group-hover:text-primary">
+    sentiment_neutral
+</span>
+</div>
+<span class="text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark group-hover:text-primary">Neutral</span>
+</div>
+
+<!-- Happy -->
+<div class="flex flex-col items-center gap-2 opacity-0 animate-fade-in-up delay-500 group cursor-pointer">
+<div class="flex items-center justify-center w-14 h-14 rounded-full bg-white dark:bg-white/5 shadow-sm border border-transparent group-hover:border-primary/50 group-hover:scale-105 transition-all">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark text-[32px] group-hover:text-primary">
+    sentiment_satisfied
+</span>
+</div>
+<span class="text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark group-hover:text-primary">Happy</span>
+</div>
+
+<!-- Very Happy (selected) -->
+<div class="flex flex-col items-center gap-2 opacity-0 animate-fade-in-up delay-600 cursor-pointer">
+<div class="icon-selected flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 border-2 border-primary text-primary animate-pulse-glow scale-110">
+<span class="material-symbols-outlined text-primary text-[32px]">
+    sentiment_very_satisfied
+</span>
+</div>
+<span class="text-xs font-bold text-primary">Very Happy</span>
+</div>
+
+</div>
+</div>
+
+<!-- Mood Log Chart -->
+<div class="px-4 pb-4 opacity-0 animate-fade-in-up delay-500">
+<div class="bg-white dark:bg-[#232f1a] rounded-xl shadow p-5 border border-gray-100 dark:border-white/5">
+
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-lg font-bold">Mood log</h3>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">Your emotional trend</p>
+</div>
+
+<button class="flex items-center gap-1 text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark bg-background-light dark:bg-white/10 px-3 py-1.5 rounded-lg">
+    This Week
+    <span class="material-symbols-outlined text-[16px]">keyboard_arrow_down</span>
+</button>
+</div>
+
+<!-- Line Graph -->
+<div class="relative h-28 w-full mb-2">
+<div aria-hidden="true" class="absolute inset-0 flex flex-col justify-between">
+<div class="border-b border-dashed border-gray-100 dark:border-white/5"></div>
+<div class="border-b border-dashed border-gray-100 dark:border-white/5"></div>
+<div class="border-b border-dashed border-gray-100 dark:border-white/5"></div>
+</div>
+
+<svg class="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 300 100">
+<defs>
+<linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" stop-color="#91eb4c" stop-opacity="0.25"/>
+<stop offset="100%" stop-color="#91eb4c" stop-opacity="0"/>
+</linearGradient>
+</defs>
+
+<path d="M0,70 C50,65 80,45 150,55 C210,65 240,25 300,30 L300,100 L0,100 Z"
+      fill="url(#chartGradient)"></path>
+
+<path d="M0,70 C50,65 80,45 150,55 C210,65 240,25 300,30"
+      fill="none" stroke="#91eb4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+
+<circle cx="300" cy="30" r="5" fill="#91eb4c"></circle>
+<circle cx="300" cy="30" r="10" fill="#91eb4c" fill-opacity="0.3" class="animate-pulse"></circle>
+
+</svg>
+</div>
+</div>
+</div>
+
+<!-- Save Button -->
+<div class="px-4 pb-8 pt-2 opacity-0 animate-fade-in-up delay-600 mt-auto">
+<button class="w-full h-14 bg-primary hover:bg-[#82d644] active:scale-[0.98] transition-all rounded-xl text-[#141b0e] text-base font-bold flex items-center justify-center shadow-lg shadow-primary/25">
+    Save Entry
+</button>
+</div>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manas App Splash Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "lime-brand": "#d4ed53",
+                        "dark-text": "#292518",
+                        "primary": "#135bec",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                    animation: {
+                        'spin-slow': 'spin 12s linear infinite',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(600px, 100dvh);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 48;
+        }
+        @keyframes gentle-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .sun-animate {
+            animation: gentle-spin 20s linear infinite;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-lime-brand text-dark-text font-display overflow-hidden selection:bg-black/10">
+<div class="relative flex h-[100dvh] w-full flex-col justify-between px-6 pt-10 pb-8 sm:p-8">
+<div class="flex flex-col items-center justify-center flex-1 w-full gap-8 -mt-20">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-[72px] text-dark-text/80 mb-2 sun-animate origin-center">light_mode</span>
+<h1 class="text-[4rem] font-medium tracking-wide lowercase leading-none">manas</h1>
+</div>
+<h2 class="text-center text-[42px] leading-[1.15] font-normal tracking-tight max-w-[85%]">
+            Grow up<br/>
+            the great<br/>
+            work!
+        </h2>
+</div>
+<div class="flex flex-col items-center w-full gap-8">
+<button
+  onclick="location.href='language.html'"
+  class="group relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-[68px] bg-white text-dark-text active:scale-[0.98] transition-all hover:bg-white/90 shadow-sm z-10 mb-4">
+  <span class="text-xl font-medium tracking-wide">Get Started</span>
+</button>
+<div class="flex flex-col items-center gap-5 w-full">
+<p class="text-[10px] uppercase tracking-[0.2em] font-bold text-dark-text/60 text-center">
+                Initiative of Government of India
+            </p>
+<div class="flex items-center justify-center gap-6 w-full px-4">
+<img alt="CDAC Logo" class="h-[36px] w-auto object-contain grayscale-0 opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3Lp6S4Xvzhzub7bU6D-EtFrAceRIGPomHXcxbRoxnCK3LuGXocauBBiUwh28fqf3SQ8JOwlsW-GDpr6BvvUgxQsRKwUhyFyM9tibTzhnbvWvp59YKJw-pCt579cPYDo9PXylTEvX7pHiojlYs20c7dZn_892u6xWJOfnEPlXvg8R9WT4iajAJPPUVm59w7wA-EM8CQdEYpFQZy1ffAyxVipZ4oPGfAliHIxcwV-LDQl-S6nzFNv_4vcJIHZMZYrbCCQItFilVTG4"/>
+<img alt="NIMHANS Logo" class="h-[44px] w-auto object-contain grayscale-0 opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGghTFFZkM_9UGl4bsD48g44F3tN4ks-lsv_Jc1S76YDDwyLWr39O7IJ1OYwldywYm_ESdNy054_BSHUgHK6xs064mJ5h9QDBs70Insn3POcoObreHcLei1gw-u2x5VJmd8qiMEwiIiRB64IhWCyirln5fUQWkFB_HnRg7r_qRJ1AI_rP9kT3mhBUnt60LQ9QqOswOKIz5CkqQUs60shR48m7GWBnbdzMmiCLJwNU0-I3b6FGki0lYjV-PYpaLi6mWnMCHEpNH4es"/>
+<img alt="AFMC Logo" class="h-[36px] w-auto object-contain grayscale-0 opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_5YbStw0kdlhVdDaBFcNABDOeOhGA6Kq5ONAYx0SbvdJM9z_85-Fg3gg4aDQXn-ggyBKK_bYAPFYXiK1RBZKlmFot4VnEQ8z0CsBoZW-SYim-UhWJYf7BFI4aPGpC0ZgatqlcMixJ9w_A0U36DxSmt4R-AZwbDiWNsSDbsiecBMJ-hWVqzDSSfpTEXWSlTAH1lk3yyCfBZW3_Y0F2Pqm36OIf_gvgldoB2o8ZSDifWPqI_9-CXYsZGNqeLaRYi_hE7w16lLWKgBg"/>
+</div>
+</div>
+</div>
+</div>
+</body></html>

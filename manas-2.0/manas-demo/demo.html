@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Manas UI Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  margin:0;
+  background:#ffffff;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+#controls{
+  position:fixed;
+  right:24px;
+  top:50%;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  z-index:1000;
+}
+#controls button{
+  padding:10px 16px;
+  border-radius:999px;
+  border:none;
+  background:#111;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+#frame-wrap{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:40px 0;
+}
+iframe{
+  width:360px;
+  height:780px;
+  border-radius:32px;
+  border:12px solid #111;
+  box-shadow:0 30px 80px rgba(0,0,0,.35);
+  transition:all .35s ease;
+  background:#fff;
+}
+iframe.tablet{
+  width:720px;
+  height:960px;
+  border-radius:28px;
+}
+</style>
+</head>
+<body>
+
+<div id="controls">
+  <button onclick="setMobile()">📱 Mobile</button>
+  <button onclick="setTablet()">📱 Tablet</button>
+</div>
+
+<div id="frame-wrap">
+  <iframe id="preview" src="index.html"></iframe>
+</div>
+
+<script>
+const frame = document.getElementById("preview");
+function setMobile(){
+  frame.classList.remove("tablet");
+}
+function setTablet(){
+  frame.classList.add("tablet");
+}
+</script>
+
+</body>
+</html>

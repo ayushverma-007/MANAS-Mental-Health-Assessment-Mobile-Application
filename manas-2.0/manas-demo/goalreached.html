@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Goal Reached - Manas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#559c86",
+              "primary-hover": "#447d6b",
+              "background-light": "#fdfbf7",
+              "background-dark": "#1a202c",
+              "surface-light": "#ffffff",
+              "surface-dark": "#2d3748",
+              "text-main": "#333333",
+              "text-sub": "#555555",
+              "pot-brown": "#c76e3c",
+              "pot-rim": "#d67d48",
+              "leaf-green": "#8cb560",
+              "star-yellow": "#f4c446"
+            },
+            fontFamily: {
+              display: ["Outfit", "sans-serif"],
+              sans: ["Outfit", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              'xl': "1rem",
+              '2xl': "1.5rem",
+              '3xl': "2rem",
+            },
+            animation: {
+                'leaf-sway': 'leaf-sway 5s ease-in-out infinite',
+                'leaf-sway-reverse': 'leaf-sway-reverse 6s ease-in-out infinite',
+                'star-float': 'star-float 6s ease-in-out infinite',
+                'star-glow': 'star-glow 2.5s ease-in-out infinite',
+                'btn-pulse': 'btn-pulse 3s ease-in-out infinite',
+                'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+            },
+            keyframes: {
+                'leaf-sway': {
+                    '0%, 100%': { transform: 'rotate(-4deg)' },
+                    '50%': { transform: 'rotate(2deg)' },
+                },
+                'leaf-sway-reverse': {
+                    '0%, 100%': { transform: 'rotate(2deg)' },
+                    '50%': { transform: 'rotate(-4deg)' },
+                },
+                'star-float': {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-12px)' },
+                },
+                'star-glow': {
+                    '0%, 100%': { filter: 'drop-shadow(0 0 2px rgba(244, 196, 70, 0.4))' },
+                    '50%': { filter: 'drop-shadow(0 0 15px rgba(244, 196, 70, 0.9))' },
+                },
+                'btn-pulse': {
+                    '0%, 100%': { transform: 'scale(1)' },
+                    '50%': { transform: 'scale(1.03)' },
+                },
+                'fade-in-up': {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                }
+            }
+          },
+        },
+      };
+    </script>
+<style>
+.leaf-origin {
+    transform-origin: 100px 130px;
+    transform-box: view-box;
+}
+body {
+  min-height: max(884px, 100dvh);
+}
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen w-full flex flex-col items-center antialiased selection:bg-primary selection:text-white transition-colors duration-300 overflow-x-hidden">
+
+<!-- Spacer for top -->
+<div class="flex-none h-8 sm:h-12"></div>
+
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center justify-center w-full max-w-md mx-auto text-center px-6 py-8 z-10">
+  
+  <!-- Text Section -->
+  <div class="space-y-3 sm:space-y-4 animate-fade-in-up mb-6 sm:mb-8">
+    <h1 class="text-3xl sm:text-4xl font-bold text-text-main dark:text-white tracking-tight">
+      Goal Reached
+    </h1>
+    <p class="text-base sm:text-lg text-text-sub dark:text-gray-300 px-4 leading-relaxed">
+      Well done! You've successfully achieved your goal.
+    </p>
+  </div>
+
+  <!-- Plant Illustration -->
+  <div class="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 flex items-center justify-center">
+    <div class="absolute bottom-0 w-40 h-5 sm:w-48 sm:h-6 bg-primary/20 rounded-[100%] blur-sm"></div>
+    <svg class="w-full h-full drop-shadow-lg overflow-visible" viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
+      <rect class="dark:opacity-90" fill="#6d9e46" height="60" width="4" x="98" y="100"></rect>
+      <g class="leaf-origin animate-leaf-sway">
+        <path d="M100 130 Q 60 110 50 80 Q 40 110 100 130" fill="#8cb560" stroke="#6d9e46" stroke-width="1"></path>
+        <path d="M100 130 Q 70 115 55 95" fill="none" opacity="0.5" stroke="#6d9e46" stroke-width="1"></path>
+      </g>
+      <g class="leaf-origin animate-leaf-sway-reverse">
+        <path d="M100 130 Q 140 110 150 80 Q 160 110 100 130" fill="#8cb560" stroke="#6d9e46" stroke-width="1"></path>
+        <path d="M100 130 Q 130 115 145 95" fill="none" opacity="0.5" stroke="#6d9e46" stroke-width="1"></path>
+      </g>
+      <ellipse cx="100" cy="155" fill="#654321" rx="45" ry="10"></ellipse>
+      <path d="M65 155 Q 100 145 135 155 Z" fill="#4a3728"></path>
+      <circle cx="80" cy="152" fill="#5c4533" r="8"></circle>
+      <circle cx="120" cy="153" fill="#5c4533" r="6"></circle>
+      <circle cx="100" cy="150" fill="#5c4533" r="7"></circle>
+      <path d="M60 160 L 70 210 Q 100 215 130 210 L 140 160 Z" fill="#c76e3c"></path>
+      <path d="M55 155 L 58 170 Q 100 175 142 170 L 145 155 Z" fill="#d67d48"></path>
+      <path d="M55 155 Q 100 165 145 155" fill="none" opacity="0.3" stroke="#b05c2e" stroke-width="1"></path>
+      <g class="animate-star-float" style="transform-box: fill-box; transform-origin: center;">
+        <g class="animate-star-glow" style="transform-origin: 100px 85px;">
+          <path d="M100 70 L 108 85 L 125 87 L 112 98 L 116 115 L 100 105 L 84 115 L 88 98 L 75 87 L 92 85 Z" fill="#f4c446" stroke="#e0b135" stroke-width="1"></path>
+          <line stroke="#f4c446" stroke-linecap="round" stroke-width="2" x1="100" x2="100" y1="60" y2="50"></line>
+          <line stroke="#f4c446" stroke-linecap="round" stroke-width="2" x1="125" x2="132" y1="75" y2="68"></line>
+          <line stroke="#f4c446" stroke-linecap="round" stroke-width="2" x1="75" x2="68" y1="75" y2="68"></line>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+</main>
+
+<!-- Bottom Action Button -->
+<div class="w-full max-w-md px-6 pb-6 sm:pb-8 z-20">
+  <a href="mood.html"
+     aria-label="Continue to next screen"
+     class="block w-full bg-primary hover:bg-primary-hover text-white text-base sm:text-lg font-semibold py-3.5 sm:py-4 px-6 rounded-2xl shadow-lg animate-btn-pulse active:animate-none active:scale-105 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-primary/30 text-center">
+    <span>Continue</span>
+  </a>
+</div>
+
+<!-- Background Decorative Elements -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0 opacity-40 dark:opacity-10">
+  <div class="absolute -top-20 -left-20 w-48 sm:w-64 h-48 sm:h-64 bg-green-200 rounded-full blur-3xl"></div>
+  <div class="absolute top-32 sm:top-40 right-10 w-24 sm:w-32 h-24 sm:h-32 bg-yellow-100 rounded-full blur-2xl"></div>
+  <div class="absolute bottom-20 left-10 w-36 sm:w-48 h-36 sm:h-48 bg-teal-100 rounded-full blur-3xl"></div>
+</div>
+
+</body>
+</html>

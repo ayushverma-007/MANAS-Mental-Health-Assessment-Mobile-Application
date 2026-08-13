@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Manas User Profile</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#588157",
+        "background-light": "#F2F8F5",
+        "background-dark": "#0f1710",
+        "card-light": "#FFFFFF",
+        "card-dark": "#1a251e",
+        "text-main-light": "#1B4332",
+        "text-sub-light": "#52796F",
+        "icon-bg-light": "#E8F5E9",
+      },
+      fontFamily: {
+        display: ["'Plus Jakarta Sans'", "sans-serif"],
+      },
+      borderRadius: {
+        xl: "1rem",
+        "2xl": "1.5rem",
+        "3xl": "2rem",
+      },
+    },
+  },
+};
+</script>
+
+<style>
+body { min-height: max(884px, 100dvh); }
+</style>
+</head>
+
+<body class="bg-background-light font-display text-text-main-light antialiased pb-32">
+
+<!-- HEADER -->
+<header class="pt-12 px-6 flex flex-col items-center">
+  <h1 class="text-3xl font-bold mb-2">Hi, Ayush Verma</h1>
+  <p class="text-text-sub-light text-lg mb-8">Grow, learn, and be happy</p>
+
+  <div class="w-40 h-40 rounded-full bg-[#FFF8E1] flex items-center justify-center border-4 border-white overflow-hidden">
+    <img class="w-full h-full object-cover scale-110 translate-y-2"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeutUBuL0ZxafrcLtl75N1jofz6f1Z0WyLdR5Bi2azd6wmQvf-i8vYcUKPGn52fF2XDcmDfkzf9V4ugk4kG-P1PlfYT70z_laZOw77bhFiY0rUEIQeGPovhPqR6U7nl0Jx8PelX99oK5AFAc0AV2QYsh1z8zFtxN1rS2jwXRftfoQot_j44CVFs4L6v8oSlbBg9VbGSYwDz9l5vqs3FZcJZ45AXLJlzOb9TwGXl5q95aVBzmz6XQNhLGEe2lF9eBp8BWEUsnaFCOk"/>
+  </div>
+</header>
+
+<!-- MENU -->
+<main class="px-5 mt-10">
+<div class="bg-card-light rounded-3xl shadow-sm overflow-hidden">
+
+<a href="#" class="flex items-center justify-between p-5 border-b">
+  <div class="flex gap-4 items-center">
+    <div class="w-12 h-12 rounded-2xl bg-icon-bg-light flex items-center justify-center text-primary">
+      <span class="material-icons-round">edit</span>
+    </div>
+    <span class="font-semibold text-lg">Edit Profile</span>
+  </div>
+  <span class="material-icons-round text-gray-400">chevron_right</span>
+</a>
+
+<a href="date.html" class="flex items-center justify-between p-5 border-b">
+  <div class="flex gap-4 items-center">
+    <div class="w-12 h-12 rounded-2xl bg-icon-bg-light flex items-center justify-center text-primary">
+      <span class="material-icons-round">bar_chart</span>
+    </div>
+    <span class="font-semibold text-lg">Activity & Stats</span>
+  </div>
+  <span class="material-icons-round text-gray-400">chevron_right</span>
+</a>
+
+<a href="growth.html" class="flex items-center justify-between p-5 border-b">
+  <div class="flex gap-4 items-center">
+    <div class="w-12 h-12 rounded-2xl bg-icon-bg-light flex items-center justify-center text-primary">
+      <span class="material-icons-round">spa</span>
+    </div>
+    <span class="font-semibold text-lg">Growth Tracker</span>
+  </div>
+  <span class="material-icons-round text-gray-400">chevron_right</span>
+</a>
+
+<a href="#" class="flex items-center justify-between p-5">
+  <div class="flex gap-4 items-center">
+    <div class="w-12 h-12 rounded-2xl bg-icon-bg-light flex items-center justify-center text-primary">
+      <span class="material-icons-round">help_outline</span>
+    </div>
+    <span class="font-semibold text-lg">Help & Support</span>
+  </div>
+  <span class="material-icons-round text-gray-400">chevron_right</span>
+</a>
+
+</div>
+</main>
+
+<!-- ✅ FIXED BOTTOM NAV (SAME AS date.html) -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-full max-w-sm px-6 z-50">
+  <div class="bg-white rounded-full h-16 shadow-[0_8px_30px_rgba(0,0,0,0.12)]
+              flex items-center justify-between px-10">
+
+    <a href="home.html" class="text-gray-400 hover:text-primary">
+      <span class="material-icons-round text-2xl">home</span>
+    </a>
+
+    <a href="date.html" class="text-gray-400 hover:text-primary">
+      <span class="material-icons-round text-2xl">calendar_today</span>
+    </a>
+
+    <a href="growth.html" class="text-gray-400 hover:text-primary">
+      <span class="material-icons-round text-2xl">local_florist</span>
+    </a>
+
+    <!-- ACTIVE -->
+    <a href="profile.html" class="text-primary bg-green-50 p-2 rounded-xl">
+      <span class="material-icons-round text-2xl">person</span>
+    </a>
+
+  </div>
+</nav>
+
+</body>
+</html>

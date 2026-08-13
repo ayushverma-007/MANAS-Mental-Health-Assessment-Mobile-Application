@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OTP Verification - Manas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FDE6A6", // Soft pastel yellow from the button
+                        "primary-dark": "#F5D585", // Slightly darker yellow for hover/active
+                        "background-light": "#F0F9F6", // Very light mint green
+                        "background-dark": "#1A2E28", // Deep forest green for dark mode
+                        "text-dark": "#2D3748",
+                        "text-light": "#E2E8F0",
+                        "accent-green": "#3D5A50", // Darker green for text
+                    },
+                    fontFamily: {
+                        display: ["Lora", "serif"], // Elegant serif for headings
+                        body: ["DM Sans", "sans-serif"], // Clean sans-serif for body
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                        "xl": "20px",
+                        "2xl": "32px",
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>.otp-input:focus {
+            transform: translateY(-2px);
+        }body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-body flex flex-col items-center justify-between p-6 transition-colors duration-300">
+<div class="w-full max-w-md flex justify-between items-start pt-4">
+<a href="number_reg.html"
+   class="text-accent-green dark:text-primary hover:opacity-70 transition-opacity p-2 rounded-full">
+  <span class="material-icons-round text-3xl">arrow_back</span>
+</a>
+
+<div class="flex flex-col items-center">
+<div class="text-accent-green dark:text-primary mb-1">
+<span class="material-icons-round text-4xl">wb_sunny</span>
+</div>
+<h1 class="font-display font-medium text-2xl tracking-tight text-accent-green dark:text-white lowercase">manas</h1>
+</div>
+<div class="w-10"></div>
+</div>
+<div class="w-full max-w-md flex-1 flex flex-col justify-center items-center -mt-10">
+<div class="text-center mb-10">
+<h2 class="font-display text-4xl md:text-5xl text-gray-800 dark:text-white mb-4 tracking-tight">Verification</h2>
+<p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed max-w-xs mx-auto">
+                Enter the 4-digit code sent to<br/>
+<span class="font-bold text-gray-800 dark:text-white tracking-wide block mt-1">+91 12345 67890</span>
+</p>
+</div>
+<form class="w-full max-w-xs space-y-12">
+<div class="flex justify-between gap-3">
+<input class="otp-input w-16 h-16 md:w-16 md:h-16 text-center text-2xl bg-white dark:bg-gray-800 border-none rounded-2xl shadow-soft text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 placeholder-gray-300 dark:placeholder-gray-600 font-display" inputmode="numeric" maxlength="1" placeholder="*" type="text"/>
+<input class="otp-input w-16 h-16 md:w-16 md:h-16 text-center text-2xl bg-white dark:bg-gray-800 border-none rounded-2xl shadow-soft text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 placeholder-gray-300 dark:placeholder-gray-600 font-display" inputmode="numeric" maxlength="1" placeholder="*" type="text"/>
+<input class="otp-input w-16 h-16 md:w-16 md:h-16 text-center text-2xl bg-white dark:bg-gray-800 border-none rounded-2xl shadow-soft text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 placeholder-gray-300 dark:placeholder-gray-600 font-display" inputmode="numeric" maxlength="1" placeholder="*" type="text"/>
+<input class="otp-input w-16 h-16 md:w-16 md:h-16 text-center text-2xl bg-white dark:bg-gray-800 border-none rounded-2xl shadow-soft text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 placeholder-gray-300 dark:placeholder-gray-600 font-display" inputmode="numeric" maxlength="1" placeholder="*" type="text"/>
+</div>
+<div class="space-y-6 text-center">
+<a href="registration.html"
+   class="w-full bg-primary hover:bg-primary-dark text-gray-900 font-medium text-lg py-4 rounded-full shadow-sm transition-colors duration-300 active:scale-[0.98] text-center block">
+  Continue
+</a>
+
+<button class="text-gray-600 dark:text-gray-400 font-medium hover:text-gray-900 dark:hover:text-white transition-colors text-base underline decoration-transparent hover:decoration-current underline-offset-4" type="button">
+                    Resend code
+                </button>
+</div>
+</form>
+</div>
+<div class="h-8 w-full"></div>
+<script>
+        // Simple script to auto-focus next input
+        const inputs = document.querySelectorAll('.otp-input');
+        inputs.forEach((input, index) => {
+            input.addEventListener('input', (e) => {
+                if (e.target.value.length === 1 && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && e.target.value === '' && index > 0) {
+                    inputs[index - 1].focus();
+                }
+            });
+        });
+    </script>
+
+</body></html>

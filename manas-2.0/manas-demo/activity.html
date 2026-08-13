@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mindfulness Session</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#19e65e",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                        "text-main-light": "#0e1b12",
+                        "text-main-dark": "#e0ebe3",
+                        "text-sub-light": "#4a6352",
+                        "text-sub-dark": "#a1b8aa",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom subtle animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-breathe {
+            animation: breathe 8s ease-in-out infinite;
+        }
+        .animate-twinkle {
+            animation: twinkle 3s ease-in-out infinite;
+        }
+        .animate-twinkle-delay {
+            animation: twinkle 4s ease-in-out infinite;
+            animation-delay: 1.5s;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main-light dark:text-text-main-dark antialiased transition-colors duration-300">
+<div class="relative flex h-full min-h-screen w-full max-w-md mx-auto flex-col overflow-hidden shadow-2xl bg-white/50 dark:bg-black/20">
+<!-- Header -->
+<div class="flex items-center p-4 pb-2 justify-between z-10">
+<button class="flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-text-main-light dark:text-text-main-dark">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back_ios_new</span>
+</button>
+<div class="flex items-center justify-end">
+<button class="flex size-12 cursor-pointer items-center justify-center rounded-full bg-transparent hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined filled" style="font-size: 24px; font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col items-center justify-center relative px-6">
+<!-- Decorative Background Blobs -->
+<div class="absolute top-1/4 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10 animate-float"></div>
+<div class="absolute bottom-1/3 right-0 w-48 h-48 bg-blue-300/10 dark:bg-blue-900/10 rounded-full blur-3xl -z-10" style="animation-delay: 2s;"></div>
+<!-- Central Illustration Container -->
+<div class="relative w-full aspect-square max-w-[320px] flex items-center justify-center mb-8">
+<!-- Decorative Stars/Sparkles -->
+<span class="material-symbols-outlined absolute top-4 right-10 text-primary/60 dark:text-primary/40 animate-twinkle" style="font-size: 24px;">temp_preferences_custom</span>
+<span class="material-symbols-outlined absolute bottom-12 left-6 text-yellow-400/60 animate-twinkle-delay" style="font-size: 20px;">star</span>
+<span class="material-symbols-outlined absolute top-12 left-8 text-primary/40 animate-twinkle" style="font-size: 16px;">circle</span>
+<!-- Main Plant Illustration -->
+<div class="w-full h-full rounded-3xl overflow-hidden relative animate-breathe flex items-center justify-center">
+<!-- Using a placeholder image with a clear alt description as requested for abstract/illustration needs -->
+<div class="w-64 h-64 bg-contain bg-center bg-no-repeat" data-alt="Minimalist illustration of a small green seedling growing from a pot" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkoX1xpR1RmPb_OzNiPPucO_hewkvHaRhHLZyuM_5ZO58FqjeBLwL5MNzpDPrvKBJZNaen3XnBLfFLcbEDmLuS7yNhb6ucIQxxlnNj64ju7FoGJX5TJ58BuQyno7SLa0Kd_yelHYNhZuOLKe7ttlAGj6FpfZZsYJnDMI460Nm5uGdgK4YhZGBVwgfkOFyuPnuwQTNHADCB4KvtA7o3rUHGqajQE8eYWUpza81NSE4YnkLgcyFAbGMNvN8_-oARDXcfzgRI-5uNpHU');">
+</div>
+</div>
+</div>
+<!-- Text Content -->
+<div class="flex flex-col items-center text-center gap-2 z-10">
+<h1 class="text-text-main-light dark:text-text-main-dark tracking-tight text-[32px] font-bold leading-tight">
+                    Mindfulness Session
+                </h1>
+<div class="flex items-center gap-2 text-text-sub-light dark:text-text-sub-dark">
+<span class="material-symbols-outlined" style="font-size: 18px;">timer</span>
+<p class="text-base font-medium leading-normal">10–12 min • Focus</p>
+</div>
+</div>
+</div>
+<!-- Bottom Action Area -->
+<div class="p-6 pb-8 w-full z-10">
+<button class="w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 bg-primary hover:bg-primary/90 active:scale-[0.98] transition-all duration-200 text-[#0e1b12] text-lg font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20">
+<span class="truncate">Start Session</span>
+</button>
+<p class="text-center text-xs text-text-sub-light/60 dark:text-text-sub-dark/40 mt-4">
+                Begin your journey to peace
+            </p>
+</div>
+</div>
+</body></html>

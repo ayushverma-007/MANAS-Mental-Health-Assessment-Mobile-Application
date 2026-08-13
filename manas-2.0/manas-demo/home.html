@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manas Home Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#D4E157",
+        "background-light": "#F2F9F5",
+        "card-light": "#FFFFFF",
+        "text-main-light": "#1F2937",
+        "text-sub-light": "#6B7280",
+        "nav-icon-active": "#AED581",
+        "nav-icon-inactive": "#6B7280"
+      },
+      fontFamily: {
+        display: ["Nunito", "sans-serif"]
+      },
+      borderRadius: {
+        "3xl": "1.5rem"
+      }
+    }
+  }
+};
+</script>
+
+<style>
+body { min-height: max(884px, 100dvh); }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.progress-ring__circle {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+</style>
+</head>
+
+<body class="bg-gray-100 font-display flex justify-center items-center min-h-screen">
+
+<div class="w-full max-w-md bg-background-light h-[100dvh] sm:rounded-3xl shadow-2xl overflow-y-auto no-scrollbar flex flex-col relative">
+
+<header class="p-6 flex justify-end">
+  <button class="bg-white p-3 rounded-2xl shadow-sm">
+    <span class="material-icons-round text-2xl">photo_camera</span>
+  </button>
+</header>
+
+<main class="flex-1 px-6 pb-28 flex flex-col items-center">
+
+<h1 class="text-3xl font-bold text-text-main-light mb-8 text-center">
+  Good morning
+</h1>
+
+<!-- Progress -->
+<div class="relative w-64 h-64 mb-10 flex items-center justify-center">
+  <svg class="w-full h-full" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="40" stroke-width="8" class="text-gray-200 stroke-current fill-none"/>
+    <circle cx="50" cy="50" r="40" stroke-width="8"
+      class="text-primary stroke-current fill-none progress-ring__circle"
+      stroke-dasharray="251.2"
+      stroke-dashoffset="62.8"
+      stroke-linecap="round"/>
+  </svg>
+  <div class="absolute text-center">
+    <div class="text-6xl font-bold">75%</div>
+    <div class="text-sm text-text-sub-light">Daily Progress</div>
+  </div>
+</div>
+
+<h2 class="text-2xl font-bold text-text-main-light mb-5 w-full">
+  New for you
+</h2>
+
+<!-- Card -->
+<a href="survey.html"
+   class="bg-card-light rounded-3xl p-5 shadow-sm hover:shadow-md transition-all flex items-center justify-between h-32 w-full mb-4">
+  <div>
+    <h3 class="text-xl font-bold mb-1">Healthy Sleep Habits</h3>
+    <p class="text-sm text-text-sub-light">Start your day right</p>
+  </div>
+</a>
+
+<a href="#"
+   class="bg-card-light rounded-3xl p-5 shadow-sm flex items-center justify-between h-32 w-full">
+  <div>
+    <h3 class="text-xl font-bold mb-1">Dealing with Anxiety</h3>
+    <p class="text-sm text-text-sub-light">Find your calm</p>
+  </div>
+</a>
+
+</main>
+
+<!-- Bottom Navigation -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-full max-w-sm px-6">
+  <div class="bg-white rounded-full shadow-lg h-16 flex items-center justify-between px-10">
+
+    <!-- Home -->
+    <span class="text-nav-icon-active">
+      <span class="material-symbols-outlined text-2xl">home</span>
+    </span>
+
+    <!-- Calendar -->
+    <a href="date.html" class="text-nav-icon-inactive hover:text-nav-icon-active">
+      <span class="material-symbols-outlined text-2xl">calendar_today</span>
+    </a>
+
+    <!-- Growth -->
+    <a href="growth.html" class="text-nav-icon-inactive hover:text-nav-icon-active">
+      <span class="material-symbols-outlined text-2xl">spa</span>
+    </a>
+
+    <!-- Profile -->
+    <a href="profile.html" class="text-nav-icon-inactive hover:text-nav-icon-active">
+      <span class="material-symbols-outlined text-2xl">person</span>
+    </a>
+
+  </div>
+</div>
+
+</div>
+</body>
+</html>

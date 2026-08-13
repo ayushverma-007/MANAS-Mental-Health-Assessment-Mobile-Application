@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Your Activity - Manas</title>
+
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#D4E157",
+        background: "#F2F9F5",
+        card: "#FFFFFF",
+        textMain: "#1F2937",
+        textSub: "#6B7280",
+        navInactive: "#6B7280",
+        navActive: "#AED581",
+      },
+      fontFamily: {
+        display: ["Nunito", "sans-serif"],
+      },
+      borderRadius: {
+        xl: "1.25rem",
+        full: "9999px",
+      },
+    },
+  },
+};
+</script>
+
+<style>
+body {
+  min-height: max(884px, 100dvh);
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+</style>
+</head>
+
+<body class="bg-background font-display flex justify-center items-center min-h-screen">
+
+<div class="w-full max-w-md bg-background h-[100dvh] flex flex-col relative overflow-y-auto no-scrollbar">
+
+  <!-- HEADER -->
+  <header class="p-6 flex items-center justify-between">
+    <a href="home.html"
+       class="p-2 rounded-full hover:bg-black/5 transition">
+      <span class="material-symbols-outlined text-3xl">arrow_back</span>
+    </a>
+    <h1 class="text-2xl font-bold text-textMain">Your Activity</h1>
+    <div class="w-10"></div>
+  </header>
+
+  <!-- CALENDAR CARD -->
+  <main class="flex-1 px-6 pb-28">
+    <div class="bg-card rounded-3xl p-6 shadow-sm mb-8">
+      <div class="flex justify-between items-center mb-6">
+        <button class="p-1 rounded-full hover:bg-gray-100">
+          <span class="material-symbols-outlined text-gray-400">chevron_left</span>
+        </button>
+        <h2 class="text-lg font-bold text-textMain">April 2024</h2>
+        <button class="p-1 rounded-full hover:bg-gray-100">
+          <span class="material-symbols-outlined text-gray-400">chevron_right</span>
+        </button>
+      </div>
+
+      <!-- DAYS -->
+      <div class="grid grid-cols-7 gap-y-4 text-center text-sm">
+        <span class="text-textSub">S</span>
+        <span class="text-textSub">M</span>
+        <span class="text-textSub">T</span>
+        <span class="text-textSub">W</span>
+        <span class="text-textSub">T</span>
+        <span class="text-textSub">F</span>
+        <span class="text-textSub">S</span>
+
+        <!-- dates -->
+        <div></div><div></div><div></div>
+        <span>1</span><span>2</span><span>3</span><span>4</span>
+        <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+        <span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+        <span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+
+        <!-- ACTIVE DAY -->
+        <span class="w-8 h-8 mx-auto flex items-center justify-center rounded-full bg-primary font-bold">
+          24
+        </span>
+
+        <span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+      </div>
+    </div>
+
+    <!-- TODAY CARD -->
+    <div class="bg-card rounded-3xl p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-textMain mb-2">Today</h2>
+      <p class="text-textSub mb-4">Mindfulness Time</p>
+
+      <div class="flex items-center gap-4">
+        <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
+          <span class="text-2xl font-bold">3h</span>
+        </div>
+        <div>
+          <p class="font-bold text-textMain">Meditation</p>
+          <p class="text-sm text-textSub">Evening session</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- BOTTOM NAV (MATCHES home.html EXACTLY) -->
+  <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-sm px-6">
+    <div class="bg-white rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] h-16 flex items-center justify-between px-10">
+
+      <!-- HOME -->
+      <a href="home.html"
+         class="flex items-center justify-center w-8 h-8 text-navInactive hover:text-navActive transition-colors">
+        <span class="material-symbols-outlined"
+              style="font-variation-settings:'FILL' 1,'wght' 600,'opsz' 24; font-size:26px;">
+          home
+        </span>
+      </a>
+
+      <!-- CALENDAR (ACTIVE) -->
+      <div class="flex items-center justify-center w-8 h-8 text-navActive">
+        <span class="material-symbols-outlined"
+              style="font-variation-settings:'FILL' 0,'wght' 600,'opsz' 24; font-size:26px;">
+          calendar_today
+        </span>
+      </div>
+
+      <!-- GROWTH -->
+      <a href="growth.html"
+         class="flex items-center justify-center w-8 h-8 text-navInactive hover:text-navActive transition-colors">
+        <span class="material-symbols-outlined"
+              style="font-variation-settings:'FILL' 1,'wght' 600,'opsz' 24; font-size:26px;">
+          spa
+        </span>
+      </a>
+
+      <!-- PROFILE -->
+      <a href="profile.html"
+         class="flex items-center justify-center w-8 h-8 text-navInactive hover:text-navActive transition-colors">
+        <span class="material-symbols-outlined"
+              style="font-variation-settings:'FILL' 1,'wght' 600,'opsz' 24; font-size:26px;">
+          person
+        </span>
+      </a>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

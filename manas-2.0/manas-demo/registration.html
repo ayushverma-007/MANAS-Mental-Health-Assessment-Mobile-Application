@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Profile - Manas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FFE5A0", // Warm pastel yellow from the button in reference
+                        "primary-hover": "#FFD570",
+                        "background-light": "#F2F9F9", // Light pastel teal/mint from reference background
+                        "background-dark": "#0F172A", // Dark Slate/Navy for dark mode
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E293B",
+                        "text-main": "#1A202C", // Dark text from reference
+                        "text-muted": "#64748B",
+                        "accent-brown": "#4A3B32", // Adding a brown accent for the logo based on user image
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                        'xl': "16px",
+                        '2xl': "24px",
+                        '3xl': "32px",
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }.gender-radio:checked + div {
+            background-color: #FFE5A0;
+            color: #1A202C;
+            border-color: #FFE5A0;
+            font-weight: 600;
+        }input:focus, select:focus, textarea:focus {
+            box-shadow: 0 0 0 2px rgba(255, 229, 160, 0.5); 
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-text-main dark:text-white font-sans transition-colors duration-300 antialiased overflow-x-hidden selection:bg-primary selection:text-black">
+<div class="max-w-md mx-auto min-h-screen flex flex-col relative px-6 py-6 sm:py-10">
+<div class="absolute top-0 left-1/2 transform -translate-x-1/2 -mt-10 -z-10 opacity-60 dark:opacity-10 pointer-events-none">
+<svg class="text-white dark:text-yellow-500 fill-current" fill="none" height="340" viewBox="0 0 200 200" width="340" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" fill-opacity="0.4" r="45"></circle>
+<path d="M100 20V40" stroke="currentColor" stroke-linecap="round" stroke-opacity="0.3" stroke-width="12"></path>
+<path d="M100 160V180" stroke="currentColor" stroke-linecap="round" stroke-opacity="0.3" stroke-width="12"></path>
+<path d="M180 100H160" stroke="currentColor" stroke-linecap="round" stroke-opacity="0.3" stroke-width="12"></path>
+<path d="M40 100H20" stroke="currentColor" stroke-linecap="round" stroke-opacity="0.3" stroke-width="12"></path>
+<path d="M156.569 43.4315L142.427 57.5736" stroke="currentColor" stroke-linecap="round" stroke-opacity="0.3" stroke-width="12"></path>
+<path d="M57.5736 142.426L43.4315 156.569" stroke="currentColor" stroke-linecap="round" stroke-opacity="0.3" stroke-width="12"></path>
+<path d="M156.569 156.569L142.427 142.426" stroke="currentColor" stroke-linecap="round" stroke-opacity="0.3" stroke-width="12"></path>
+<path d="M57.5736 57.5736L43.4315 43.4315" stroke="currentColor" stroke-linecap="round" stroke-opacity="0.3" stroke-width="12"></path>
+</svg>
+</div>
+<header class="flex items-start justify-between mb-6 z-10">
+<a href="number_reg.html"
+   class="p-2 -ml-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-primary mt-1">
+  <span class="material-symbols-outlined text-2xl text-text-main dark:text-white">arrow_back</span>
+</a>
+
+<div class="flex flex-col items-center justify-center text-accent-brown dark:text-primary">
+<span class="material-symbols-outlined text-[32px] font-bold !leading-none" style="font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 48;">wb_sunny</span>
+<span class="text-[10px] font-bold tracking-[0.2em] mt-1 uppercase">Manas</span>
+</div>
+</header>
+<div class="mb-8 z-10 relative">
+<h1 class="text-3xl font-extrabold text-text-main dark:text-white tracking-tight mb-2">Create Profile</h1>
+<p class="text-text-muted dark:text-gray-400 font-medium text-base">
+                Join the Manas community for wellness.
+            </p>
+</div>
+<form action="#" class="flex-1 flex flex-col space-y-5 z-10" method="POST" onsubmit="event.preventDefault()">
+<div class="space-y-1.5">
+<label class="block text-sm font-semibold text-text-main dark:text-gray-200 ml-1" for="username">Username</label>
+<div class="relative">
+<input class="w-full bg-surface-light dark:bg-surface-dark border-transparent focus:border-primary focus:ring-0 rounded-xl px-4 py-4 text-text-main dark:text-white placeholder-gray-400 shadow-soft font-medium transition-all" id="username" placeholder="e.g. Rahul_Verma" type="text"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="block text-sm font-semibold text-text-main dark:text-gray-200 ml-1" for="pin">Set 4-Digit Pin</label>
+<div class="relative">
+<input class="w-full bg-surface-light dark:bg-surface-dark border-transparent focus:border-primary focus:ring-0 rounded-xl px-4 py-4 text-text-main dark:text-white placeholder-gray-400 shadow-soft font-medium tracking-widest transition-all" id="pin" inputmode="numeric" maxlength="4" placeholder="••••" type="password"/>
+<button class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none" type="button">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="block text-sm font-semibold text-text-main dark:text-gray-200 ml-1" for="birth-month">Birth Month</label>
+<div class="relative">
+<select class="w-full bg-surface-light dark:bg-surface-dark border-transparent focus:border-primary focus:ring-0 rounded-xl px-4 py-4 text-text-main dark:text-white shadow-soft font-medium appearance-none cursor-pointer transition-all" id="birth-month">
+<option disabled="" selected="" value="">Month</option>
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+<span class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-gray-400">
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="block text-sm font-semibold text-text-main dark:text-gray-200 ml-1" for="birth-year">Birth Year</label>
+<div class="relative">
+<select class="w-full bg-surface-light dark:bg-surface-dark border-transparent focus:border-primary focus:ring-0 rounded-xl px-4 py-4 text-text-main dark:text-white shadow-soft font-medium appearance-none cursor-pointer transition-all" id="birth-year">
+<option disabled="" selected="" value="">Year</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+</select>
+<span class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-gray-400">
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-text-main dark:text-gray-200 ml-1">Gender</label>
+<div class="flex space-x-3">
+<label class="flex-1 cursor-pointer">
+<input class="sr-only gender-radio" name="gender" type="radio" value="male"/>
+<div class="w-full bg-surface-light dark:bg-surface-dark border border-transparent rounded-xl py-3.5 text-center text-text-muted dark:text-gray-400 font-medium shadow-soft hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+                            Male
+                        </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input class="sr-only gender-radio" name="gender" type="radio" value="female"/>
+<div class="w-full bg-surface-light dark:bg-surface-dark border border-transparent rounded-xl py-3.5 text-center text-text-muted dark:text-gray-400 font-medium shadow-soft hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+                            Female
+                        </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input class="sr-only gender-radio" name="gender" type="radio" value="other"/>
+<div class="w-full bg-surface-light dark:bg-surface-dark border border-transparent rounded-xl py-3.5 text-center text-text-muted dark:text-gray-400 font-medium shadow-soft hover:bg-gray-50 dark:hover:bg-gray-700 transition-all">
+                            Other
+                        </div>
+</label>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="block text-sm font-semibold text-text-main dark:text-gray-200 ml-1" for="bio">More about yourself</label>
+<textarea class="w-full bg-surface-light dark:bg-surface-dark border-transparent focus:border-primary focus:ring-0 rounded-xl px-4 py-4 text-text-main dark:text-white placeholder-gray-400 shadow-soft font-medium resize-none transition-all" id="bio" placeholder="Tell us what brings you to Manas..." rows="3"></textarea>
+</div>
+<div class="h-4"></div>
+<a href="home.html"
+   class="w-full bg-primary hover:bg-primary-hover text-text-main font-bold text-lg py-4 rounded-full shadow-lg shadow-yellow-100 dark:shadow-none flex items-center justify-center space-x-2 active:scale-[0.98] transition-all duration-200 text-center">
+  <span>Create Profile</span>
+  <span class="material-symbols-outlined text-xl">arrow_forward</span>
+</a>
+
+</form>
+<footer class="mt-6 text-center z-10">
+<p class="text-sm text-text-muted dark:text-gray-500">
+                Already registered? <a class="font-bold text-text-main dark:text-white hover:underline" href="login.html">
+  Login
+</a>
+
+</p>
+</footer>
+</div>
+</body></html>

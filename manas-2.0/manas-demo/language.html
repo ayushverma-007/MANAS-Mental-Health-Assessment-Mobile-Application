@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Language Selection Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#D4E85C", // Lime green from English button
+              "background-light": "#F5FAF8", // Very light mint background
+              "background-dark": "#1A202C", // Dark mode background
+              "card-light": "#E0F2E9", // The light green card color
+              "card-dark": "#2D3748", // Dark mode card
+              "accent-orange": "#FFE4B5", // The Next button color
+            },
+            fontFamily: {
+              display: ["DM Sans", "sans-serif"],
+              sans: ["DM Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1.5rem",
+              'xl': "1rem",
+              '2xl': "1.5rem",
+              '3xl': "2rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4 transition-colors duration-300">
+<div class="w-full max-w-sm mx-auto min-h-[800px] flex flex-col relative">
+<div class="pt-8 pb-4 px-2">
+</div>
+<div class="px-4 mb-8">
+<h1 class="text-4xl font-bold text-gray-900 dark:text-white leading-tight mb-6 tracking-tight">
+                Select your<br/>language
+            </h1>
+<div class="flex space-x-4">
+<button class="bg-primary text-gray-900 px-8 py-3 rounded-full font-medium shadow-sm hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-gray-900">
+                    English
+                </button>
+<button class="bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 px-8 py-3 rounded-full font-medium shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 dark:focus:ring-offset-gray-900">
+                    हिंदी
+                </button>
+</div>
+</div>
+<div class="flex-1 bg-card-light dark:bg-card-dark rounded-3xl p-6 flex flex-col items-center justify-between mx-2 mb-4 relative overflow-hidden transition-colors duration-300">
+<div class="flex-1 w-full flex items-center justify-center relative mt-8 mb-4">
+<div class="absolute top-10 left-10 text-teal-400 dark:text-teal-200 opacity-60">
+<span class="material-icons text-xl">star</span>
+</div>
+<div class="absolute top-20 right-10 text-teal-400 dark:text-teal-200 opacity-60">
+<span class="material-icons text-sm">star</span>
+</div>
+<div class="absolute bottom-20 left-4 text-teal-400 dark:text-teal-200 opacity-60">
+<span class="material-icons text-xs">circle</span>
+</div>
+<div class="relative z-10 w-64 h-64 flex items-center justify-center">
+<img alt="Person meditating in lotus position with leaves" class="object-contain w-full h-full mix-blend-multiply dark:mix-blend-normal dark:opacity-90 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNyyjCx72b_b25s4D4Cj_0XVeUjpeCBp6OKMTgTHlZx0chJiERly8uaDD-Mk_QjaFELIGgdP6FrHu4AVCzDmKJ-6D8Dw4mUDop5CqfuEIPFs0YYgO2tLhwNQx7lMI_IKotJZ6vbcRJwI9iTnObDzFqx1pHjdA_TmY2muAWFlTGiEoINKNSLfmXGHsSQDT2pyU9WB_wtKM-yRECdgNIVMyY2OuHqYmKX9VthIh_ANHNrqLKQ4t6oQysWsGMcTQZhGi4qkT5s-Pkx2s" style="mask-image: radial-gradient(circle, black 60%, transparent 100%); -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);"/>
+</div>
+</div>
+<div class="w-full text-center pb-8 z-20">
+<h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8 leading-snug px-2">
+                    Welcome to Your<br/>Space of Mindfulness
+                </h2>
+<a href="number_reg.html"
+   class="group relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-[68px] bg-white text-dark-text active:scale-[0.98] transition-all hover:bg-white/90 shadow-sm z-10 mb-4">
+  <span class="text-xl font-medium tracking-wide">Next</span>
+</a>
+</div>
+</div>
+</div>
+
+</body></html>
